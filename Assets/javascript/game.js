@@ -3,7 +3,8 @@ var game = {
 
     state: 0,
 
-    words: ["dog", "cat", "mouse", "alphabaloogia"],
+    words: ["richardhendricks", "bighead", "gilfoyle", "dinesh", "monica", "jareddunn", "gavinbelson", "jianyang", "erlichbachman", "lauriebream", "russhanneman", "jackbarker", "hoover"],
+
 
     var: {
         answer: "",
@@ -27,7 +28,7 @@ var game = {
         };
         document.getElementById("spaces").innerHTML = this.var.emptArr;
         this.var.ansLength = this.var.emptArr.length;
-        this.var.lives = this.var.emptArr.length;
+        this.var.lives = this.var.emptArr.length - 1;
         document.getElementById("playerLives").innerHTML = this.var.lives;
         this.var.posLetters = [];
         for (var i = 65; i < 91; i++) {
@@ -62,6 +63,7 @@ var game = {
                 if (this.var.emptArr.toString() === this.var.ansArr.toString()) {
                     this.var.wins = this.var.wins + 1;
                     document.getElementById("wins").innerHTML = this.var.wins;
+                    $(".goodGame").css("visibility", "visible");
                     this.state = this.state - 1;
                     //you win!!!
                 }
@@ -83,6 +85,7 @@ var game = {
                     document.getElementById("playerLives").innerHTML = this.var.lives;
                     this.var.losses = this.var.losses + 1;
                     document.getElementById("losses").innerHTML = this.var.losses;
+                    $(".goodGame").css("visibility", "visible");
                     this.state = this.state - 1;
                     //game over!!!
                 }
@@ -93,8 +96,11 @@ var game = {
 
 document.onkeyup = addEventListener("keyup", function (event) {
     if (game.state === 0) {
+        $(".start").css("visibility", "hidden");
+        $(".goodGame").css("visibility", "hidden");
         game.gameSetup(event);
     } else{
         game.gamePlay(event);
     }
 })
+        
