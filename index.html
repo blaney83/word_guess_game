@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Guess The Word!</title>
-    <style src="css/style.css"></style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style src="Assets/css/style.css"></style>
 </head>
 <body>
     <div id="startScreen">Click any key to start!</div>
-    <p>Word length: <span id="spaces"></span></p>
-    <p>Player Lives: <span  id="playerLives"></span></p>
-    <p>Player Incorrect Guesses: <span id="usedLetters"></span></p>
-    <h1 id="lettersGuessed"></h1>
+    <p>Word Length: <span id="spaces"></span></p>
+    <p>Player Lives: <span id="playerLives"></span></p>
+    <p>Player Incorrect Guesses: <span id="wrongLetters"></span></p>
+    <p>Player Correct Guesses: <span id="rightLetters"></span></p>
+    <p>Letter Options: <span id="alphabet"></span></p>
+    <P>Wins: <span id="wins"></span></P>
+    <p>Losses: <span id="losses"></span></p>
     <script src="Assets/javascript/game.js"></script>
 </body>
 </html>
