@@ -1,11 +1,15 @@
+/* fix the start and game end meme screens */
 #background_img{
-    opacity: .15;
+    opacity: 0.15;
     height: 100%;
     width: 100%;
     z-index: 100;
     position: absolute;
     top: 0%;
+}
 
+body {
+    background-image: url(../images/bgnew.png)
 }
 
 .start{
@@ -79,6 +83,7 @@
     border-radius: .4rem;
     top: 20%;
     left: 50%;
+    z-index: 10;
     margin-left: -37.5%;
     visibility: hidden;
 }
@@ -90,7 +95,6 @@
     color: rgba(255, 255, 0, 0.699);
     margin-top: 2rem;
     font-size: 2rem;
-
 }
 
 #ggB{
@@ -98,7 +102,6 @@
     border-bottom-right-radius: .5rem;
     background-color: rgba(0, 0, 255, 0.555);
     color: rgba(255, 255, 0, 0.699);
-
 }
 
 /* #1c947982 */
